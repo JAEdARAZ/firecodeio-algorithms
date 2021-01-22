@@ -1,1 +1,1 @@
-# firecodeio-algorithms
+Solutions to problems from www.firecode.io
