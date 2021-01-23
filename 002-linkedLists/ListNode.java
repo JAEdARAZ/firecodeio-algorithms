@@ -37,4 +37,13 @@ public class ListNode {
         behind.next = null;
         return head;
     }
+
+    public ListNode deleteAtHead(ListNode head) {
+        //null or head was the only node
+        if(head==null || head.next==null) return null;
+        
+        ListNode newHead = head.next;
+        head = null;
+        return newHead;
+    }
 }
