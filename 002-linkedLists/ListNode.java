@@ -46,4 +46,24 @@ public class ListNode {
         head = null;
         return newHead;
     }
+
+    //could be improved by using node.next.next
+    public ListNode findMiddleNode(ListNode head) {
+        if(head==null || head.next==null) return head;
+        
+        boolean reachedEnd = false;
+        ListNode behind = head, front = head; 
+        while(!reachedEnd){
+            for(int i=0; i<2; i++){
+                front = front.next;
+                if(front == null){
+                    reachedEnd = true;
+                    break;
+                }
+            }
+            if(!reachedEnd) behind = behind.next;
+        }
+        
+        return behind;
+    }
 }
